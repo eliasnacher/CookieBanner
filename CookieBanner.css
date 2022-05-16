@@ -1,0 +1,55 @@
+/**
+ * @preserve CookieBanner
+ * 
+ * @version v1.0.0
+ * @link https://github.com/eliasnacher/CookieBanner
+ * @author Elías Nácher (https://github.com/eliasnacher)
+ * @mail eliasnacher@gmail.com
+ * @license MIT
+ * 
+ * @dependencies
+ * - CookieBanner.js
+ * - CookieBanner.css
+ * - Javascript
+ * 
+ * @description A simple and lightweight cookie banner for your website.
+ * 
+ * @created 2022-05-16
+ */
+
+.cookie-banner {
+    font-family: Roboto, sans-serif;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background-color: #FAFAFA;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 5px #999;
+    border: solid 1px #EAEAEA;
+    color: #555;
+}
+
+.cookie-banner-text {
+    float: left;
+    margin: 0;
+    padding: 10px 10px;
+}
+
+.cookie-banner-link {
+    padding-left: 10px;
+}
+
+.cookie-banner-button {
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+    color: #555;
+    border: solid 1px #EAEAEA;
+    background-color: #FAFAFA;
+    box-shadow: 1px 1px 2px #999;
+}
+
+.cookie-banner-button:hover {
+    background-color: #F6F6F6;
+}
