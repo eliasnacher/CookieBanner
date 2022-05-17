@@ -28,6 +28,7 @@
     box-shadow: 5px 5px 5px #999;
     border: solid 1px #EAEAEA;
     color: #555;
+    font-size:17px;
 }
 
 .cookie-banner-text {
@@ -48,6 +49,7 @@
     border: solid 1px #EAEAEA;
     background-color: #FAFAFA;
     box-shadow: 1px 1px 2px #999;
+    font-size:17px;
 }
 
 .cookie-banner-button:hover {
