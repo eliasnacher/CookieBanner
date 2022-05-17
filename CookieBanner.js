@@ -17,7 +17,19 @@
  * @created 2022-05-16
  */
 
-if (document.cookie.indexOf("cookie_banner_accept=true") == -1)
+const BannerInnerText = 'This website uses cookies to ensure you get the best experience on our website.' // Banner text
+const BannerLinkInnerText = 'Learn more' // Link text
+const BannerLinkHref = 'https://www.google.com/policies/technologies/cookies/' // Link URL
+const BannerLinkTarget = 'blank' // Link target
+const BannerButtonInnerText = 'Got it!' // Button text
+
+/**
+ * @description Checks if the cookie banner is accepted.
+ */
+if (document.cookie.indexOf("cookie_banner_accept=true") == -1) {
+    /**
+     * @description Creates the cookie banner.
+     */
     document.addEventListener("DOMContentLoaded", () => {
         var cookieBannerDiv = document.createElement('div')
         var cookieBannerText = document.createElement('p')
@@ -29,12 +41,12 @@ if (document.cookie.indexOf("cookie_banner_accept=true") == -1)
         cookieBannerLink.classList.add('cookie-banner-link')
         cookieBannerButton.classList.add('cookie-banner-button')
 
-        cookieBannerText.innerText = 'This website uses cookies to ensure you get the best experience on our website.'
-        cookieBannerLink.innerText = 'Learn more'
-        cookieBannerLink.href = 'https://www.google.com/policies/technologies/cookies/'
-        cookieBannerLink.target = 'blank'
-        cookieBannerButton.innerText = 'Got it!'
-        cookieBannerButton.addEventListener('click', acceptCookies)
+        cookieBannerText.innerText = BannerInnerText
+        cookieBannerLink.innerText = BannerLinkInnerText
+        cookieBannerLink.href = BannerLinkHref
+        cookieBannerLink.target = BannerLinkTarget
+        cookieBannerButton.innerText = BannerButtonInnerText
+        cookieBannerButton.addEventListener('click', acceptCookies) // Button event
 
         cookieBannerText.appendChild(cookieBannerLink)
         cookieBannerDiv.appendChild(cookieBannerText)
@@ -42,7 +54,11 @@ if (document.cookie.indexOf("cookie_banner_accept=true") == -1)
 
         document.body.appendChild(cookieBannerDiv)
     });
+}
 
+/**
+ * @description Accepts the cookies by a year.
+ */
 acceptCookies = () => {
     const expirationDays = 365
     var cookieAcceptExpirationDate = new Date()
