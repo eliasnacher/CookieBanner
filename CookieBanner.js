@@ -32,6 +32,7 @@ if (document.cookie.indexOf("cookie_banner_accept=true") == -1)
         cookieBannerText.innerText = 'This website uses cookies to ensure you get the best experience on our website.'
         cookieBannerLink.innerText = 'Learn more'
         cookieBannerLink.href = 'https://www.google.com/policies/technologies/cookies/'
+        cookieBannerLink.target = 'blank'
         cookieBannerButton.innerText = 'Got it!'
         cookieBannerButton.addEventListener('click', acceptCookies)
 
